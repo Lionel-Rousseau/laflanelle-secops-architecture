@@ -30,7 +30,7 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 | Réseau & sécurité | OPNsense NGFW, Zenarmor IPS, Tailscale (mesh VPN), Cloudflare WAF/CDN, Let's Encrypt |
 | Détection & supervision | Wazuh, Security Onion (Suricata + Zeek), Zabbix, Fail2ban, RKhunter, Tripwire, ClamAV |
 | Messagerie | SPF, DKIM, DMARC, OpenARC, OpenPGP, TLS 1.3 strict |
-| Sauvegardes | restic (AES-256, conteneurs LUKS), Proxmox Backup Server, règle 3-2-1 |
+| Sauvegardes | rsync/restic (AES-256, conteneurs LUKS), Proxmox Backup Server, règle 3-2-1 |
 | Automatisation | Ansible, Bash, Git, systemd timers |
 | Gestion des secrets | Proton Pass, pass (GPG + Yubikey), Kleopatra |
 
@@ -39,7 +39,7 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 | Indicateur | Valeur |
 |---|---|
 | Uptime cumulé sur 7 ans | 99,9 % |
-| Volume mail traité | ~172 messages/jour · ~63 000/an |
+| Volume mail traité | ~170 messages/jour · ~63 000/an |
 | Trafic web | ~19 000 requêtes HTTP/jour |
 | RPO/RTO messagerie | 15 min / 1 h, testé mensuellement |
 | RPO/RTO web e-commerce | 1 h / 2 h, testé mensuellement |
