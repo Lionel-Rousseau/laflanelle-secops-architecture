@@ -15,8 +15,8 @@ Tous les éléments présentés ici ont été anonymisés : aucun hostname inter
 
 L'infrastructure se déploie sur six environnements distincts :
 
-- **Trois serveurs dédiés OVH** (Ubuntu LTS) portant les services exposés à Internet : web, mail, MX secondaires, sauvegardes hors site.
-- **Trois sites physiques** interconnectés via un mesh VPN Tailscale : site principal hébergeant le cœur de l'infrastructure interne, site secondaire (bureau externe), site tertiaire (résidence secondaire avec domotique et exit node redondant).
+- **2 serveurs dédiés OVH** (Ubuntu LTS) portant les services exposés à Internet : web, mail, MX secondaires, sauvegardes hors site.
+- **3 sites physiques** interconnectés via un mesh VPN Tailscale : site principal hébergeant le cœur de l'infrastructure interne, site secondaire (bureau externe), site tertiaire (résidence secondaire avec domotique et exit node redondant).
 
 La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en frontal, OPNsense NGFW + Zenarmor au périmètre, segmentation VLAN avec deny-by-default à l'intérieur du LAN, durcissement CIS au niveau hôte. Un SOC interne basé sur Wazuh (XDR/SIEM) et Security Onion (NSM/IDS) assure la corrélation et la détection des mouvements latéraux.
 
