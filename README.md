@@ -1,7 +1,7 @@
 # Architecture SecOps & Continuité — Infrastructure Linux multi-sites
 
 > Dossier technique d'une infrastructure Linux en production, conçue, déployée et opérée en autonomie depuis 2018.
-> Sept années d'exploitation continue · 99,9 % d'uptime cumulé · défense en profondeur · PCA documenté et testé.
+> 7 années d'exploitation continue · 99,9 % d'uptime cumulé · défense en profondeur · PCA documenté et testé.
 
 ---
 
