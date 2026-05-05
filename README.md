@@ -42,7 +42,7 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 | Volume mail traité | ~170 messages/jour · ~63 000/an |
 | Trafic web | ~19 000 requêtes HTTP/jour |
 | RPO/RTO messagerie | 15 min / 1 h, testé mensuellement |
-| RPO/RTO web e-commerce | 1 h / 2 h, testé mensuellement |
+| RPO/RTO web e-commerce | 1 h / 1 h, testé mensuellement |
 | Incidents avec fuite de données | 0 |
 | Incidents > 3 h d'interruption | 0 |
 
