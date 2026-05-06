@@ -7,7 +7,7 @@
 
 ## Pourquoi ce dépôt
 
-Ce dépôt sert de vitrine technique. Il documente une infrastructure réelle — pas un lab — qui supporte une activité économique 24/7 et traite chaque jour ~172 emails entrants et ~19 000 requêtes HTTP. Il s'adresse aux recruteurs, RSSI et responsables d'exploitation qui souhaitent évaluer concrètement ma pratique au-delà d'un CV.
+Ce dépôt sert de vitrine technique. Il documente une infrastructure réelle qui supporte une activité économique 24/7 et traite chaque jour ~170 emails entrants et ~19 000 requêtes HTTP. Il s'adresse aux recruteurs, RSSI et responsables d'exploitation qui souhaitent évaluer concrètement ma pratique au-delà d'un CV.
 
 Tous les éléments présentés ici ont été anonymisés : aucun hostname interne, adresse IP publique ou élément exploitable à des fins offensives n'est divulgué.
 
@@ -18,7 +18,7 @@ L'infrastructure se déploie sur six environnements distincts :
 - **2 serveurs dédiés OVH** (Ubuntu LTS) portant les services exposés à Internet : web, mail, MX secondaires, sauvegardes hors site.
 - **3 sites physiques** interconnectés via un mesh VPN Tailscale : site principal hébergeant le cœur de l'infrastructure interne, site secondaire (bureau externe), site tertiaire (résidence secondaire avec domotique et exit node redondant).
 
-La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en frontal, OPNsense NGFW + Zenarmor au périmètre, segmentation VLAN avec deny-by-default à l'intérieur du LAN, durcissement CIS au niveau hôte. Un SOC interne basé sur Wazuh (XDR/SIEM) et Security Onion (NSM/IDS) assure la corrélation et la détection des mouvements latéraux.
+La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en frontal, OPNsense NGFW + Zenarmor au périmètre, segmentation VLAN avec deny-by-default à l'intérieur du LAN, durcissement basé sur les benchmarks CIS au niveau hôte. Un SOC interne basé sur Wazuh (XDR/SIEM) et Security Onion (NSM/IDS) assure la corrélation et la détection des mouvements latéraux.
 
 ## Stack technique
 
@@ -29,8 +29,8 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 | Virtualisation | Proxmox VE, Proxmox Backup Server, Docker |
 | Réseau & sécurité | OPNsense NGFW, Zenarmor IPS, Tailscale (mesh VPN), Cloudflare WAF/CDN, Let's Encrypt |
 | Détection & supervision | Wazuh, Security Onion (Suricata + Zeek), Zabbix, Fail2ban, RKhunter, Tripwire, ClamAV |
-| Messagerie | SPF, DKIM, DMARC, OpenARC, OpenPGP, TLS 1.3 strict |
-| Sauvegardes | rsync/restic (AES-256, conteneurs LUKS), Proxmox Backup Server, règle 3-2-1 |
+| Messagerie | SPF, DKIM, DMARC, OpenARC, OpenPGP, TLS 1.2+ strict |
+| Sauvegardes | Rsync/restic (AES-256, conteneurs LUKS), Proxmox Backup Server, règle 3-2-1 |
 | Automatisation | Ansible, Bash, Git, systemd timers |
 | Gestion des secrets | Proton Pass, pass (GPG + Yubikey), Kleopatra |
 
@@ -39,8 +39,8 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 | Indicateur | Valeur |
 |---|---|
 | Uptime cumulé sur 7 ans | 99,9 % |
-| Volume mail traité | ~170 messages/jour · ~63 000/an |
-| Trafic web | ~19 000 requêtes HTTP/jour |
+| Volume mail traité | 170 messages/jour env. · ~63 000/an |
+| Trafic web | 19 000 requêtes HTTP/jour |
 | RPO/RTO messagerie | 15 min / 1 h, testé mensuellement |
 | RPO/RTO web e-commerce | 1 h / 1 h, testé mensuellement |
 | Incidents avec fuite de données | 0 |
@@ -53,9 +53,9 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 
 ## Points forts mis en avant
 
-- **Visibilité réseau étendue.** Security Onion connecté à un port SPAN du switch L2+ pour analyser le trafic LAN intégral, y compris le 10 Gbps en passthrough vers OPNsense — détection des mouvements latéraux est-ouest, pas seulement du périmètre nord-sud.
+- **Visibilité réseau étendue.** Security Onion connecté à un port SPAN du switch L2+ pour analyser le trafic LAN intégral, y compris le 10 Gbps en passthrough vers OPNsense, détection des mouvements latéraux est-ouest, pas seulement du périmètre nord-sud.
 - **PCA opérationnel et testé.** Nœud Proxmox de secours (HP ProDesk) hébergeant des copies froides synchronisées de la VM OPNsense (NGFW + IPS + Tailscale Router) et de la VM FreeRADIUS/Unbound. Procédure de bascule documentée, testée semestriellement, RTO < 15 min.
-- **Sauvegardes vérifiées, pas seulement déclarées.** Tests de restauration mensuels effectifs, journal d'exploitation tenu, deux problèmes silencieux détectés et corrigés sur la période grâce à cette discipline.
+- **Sauvegardes vérifiées, pas seulement déclarées.** Tests de restauration mensuels effectifs, journaux d'exploitation tenus, permettant ainsi la résolution de problèmes silencieux détectés et corrigés sur la période.
 - **Cloisonnement strict du lab offensif.** VLAN Lab isolé du LAN de production, sortie Internet en deny-all + whitelist explicite, cibles d'entraînement activées à la demande uniquement.
 
 ## Roadmap publique
@@ -63,7 +63,7 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 Quelques chantiers en cours ou programmés pour les douze prochains mois :
 
 - Bascule semi-automatique du PCA OPNsense via heartbeat CARP/VRRP.
-- Industrialisation de playbooks Ansible publics anonymisés (durcissement Debian, déploiement Wazuh, déploiement Postfix/Rspamd).
+- Industrialisation de playbooks Ansible publics anonymisés (durcissement Debian/Ubuntu, déploiement Wazuh, déploiement Postfix/Rspamd).
 - IDS DNS sur Unbound (passive DNS + détection DGA / tunneling).
 - POC HashiCorp Vault dans le VLAN Lab — étude de la rotation dynamique de secrets.
 - Étude NixOS pour les serveurs OVH publics (reproductibilité atomique, rollback transactionnel).
