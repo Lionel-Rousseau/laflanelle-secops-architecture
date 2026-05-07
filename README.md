@@ -40,8 +40,8 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 | Indicateur | Valeur |
 |---|---|
 | Uptime cumulé sur 7 ans | 99,9 % |
-| Volume mail traité | 170 messages/jour env. - 63 000/an |
-| Trafic web | 19 000 requêtes HTTP/jour en moyenne |
+| Volume mail traité | ~170 messages/jour - ~63 000/an sur 13 domaines |
+| Trafic web | ~19 000 requêtes HTTP/jour |
 | RPO/RTO messagerie | 15 min / 1 h, testé mensuellement |
 | RPO/RTO web e-commerce | 1 h / 1 h, testé mensuellement |
 | Incidents avec fuite de données | 0 |
@@ -55,8 +55,8 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 ## Points forts mis en avant
 
 - **Visibilité réseau en couches.** NSM passif (Security Onion + Suricata + Zeek) connecté à un port SPAN du switch L2+ pour analyser le trafic nord-sud, y compris le 10 Gbps en passthrough vers OPNsense. Défense est-ouest sur les flux inter-VLAN assurée par le filtrage OPNsense (ACL deny-by-default) et par la corrélation Wazuh des logs hôtes. Extension NSM aux flux est-ouest inscrite à la roadmap.
-- **PCA interne, bascule du firewall et services critiques..** Nœud Proxmox de secours (HP ProDesk) hébergeant des copies de la VM OPNsense (NGFW + IPS + Tailscale Router) et de la VM FreeRADIUS/Unbound, synchronisées toutes les 24 heures avec rétention de 2 jours. Procédure de bascule documentée, testée régulièrement, RTO cible inférieur à 15 minutes sur les services critiques (accès Internet, authentification Wi-Fi).
-- **PCA externe distribuée géographiquement.** Les deux serveurs OVH dédiés (Sites FR A et FR B) sont hébergés sur des datacenters distincts pour résister à une panne site. MX secondaire (priorité 20) sur FR B garantissant la continuité de la réception mail si FR A devient indisponible. Sauvegardes restic/rsync chiffrées répliquées de FR A vers FR B, reconstruction possible depuis backup en cas de perte totale. Le retour à une architecture sur 3 nœuds externes est inscrit à la roadmap pour découpler (à nouveau) complètement web et mail et améliorer la résilience web.
+- **PCA interne, bascule du firewall et services critiques.** Nœud Proxmox de secours (HP ProDesk) hébergeant des copies de la VM OPNsense (NGFW + IPS + Tailscale Router) et de la VM FreeRADIUS/Unbound, synchronisées toutes les 24 heures avec rétention de 2 jours. Procédure de bascule documentée, testée régulièrement, RTO cible inférieur à 15 minutes sur les services critiques (accès Internet, authentification Wi-Fi).
+- **PCA externe distribué géographiquement.** Les deux serveurs OVH dédiés (Sites FR A et FR B) sont hébergés sur des datacenters distincts pour résister à une panne site. MX secondaire (priorité 20) sur FR B garantissant la continuité de la réception mail si FR A devient indisponible. Sauvegardes restic/rsync chiffrées répliquées de FR A vers FR B, reconstruction possible depuis backup en cas de perte totale. Le retour à une architecture sur 3 nœuds externes (configuration en place entre 2018 et 2024) est inscrit à la roadmap pour découpler complètement web et mail et améliorer la résilience web.
 - **Sauvegardes régulières vérifiées.** Règle 3-2-1 avec restic/rsync chiffré (LUKS) répliqué hors-site sur OVH, et copie quotidienne sur support amovible pour les données NAS les plus sensibles. Tests de restauration mensuels effectifs avec rotation des cibles, plusieurs problèmes silencieux détectés et corrigés grâce à ces tests sur la période.
 - **Cloisonnement strict du lab offensif.** VLAN Lab isolé du LAN de production, sortie Internet en deny-all + whitelist explicite des cibles d'entraînement, activation à la demande uniquement. Migration sur un Proxmox dédié physiquement séparé inscrite à la roadmap pour éliminer définitivement le risque résiduel de pivotement.
 
@@ -79,6 +79,7 @@ Certifié CompTIA Security+ et CySA+ · TOEIC 980 (C1/C2)
 Disponible pour un poste en exploitation Linux, administration systèmes ou SecOps.
 
 📧 lionel@rousseau.kr
+💼 [LinkedIn](https://www.linkedin.com/in/lionel-rousseau-kr/)
 
 ## Licence
 
