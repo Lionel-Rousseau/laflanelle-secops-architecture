@@ -2,7 +2,7 @@
 
 > Dossier technique d'une infrastructure Linux en production, conçue, déployée et opérée en autonomie depuis 2018.
 > 7 années d'exploitation continue · 99,9 % d'uptime cumulé · défense en profondeur · PCA documenté et testé.
-> 25+ années d’expérience en administration de systèmes Linux exposés
+> 25+ années d’expérience en administration de systèmes Linux exposés.
 
 ---
 
