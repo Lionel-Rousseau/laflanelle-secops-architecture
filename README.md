@@ -94,7 +94,6 @@ gpg --import lionel-rousseau-pubkey.asc
 
 # Vérifier les signatures détachées
 gpg --verify docs/Architecture.pdf.sig docs/Architecture.pdf
-
 gpg --verify docs/Network-Diagram.pdf.sig docs/Network-Diagram.pdf
 
 Empreinte de la clé : `111D 0326 757E C7EC B3EC 17F5 D28C 8EB0 557B 5620`
