@@ -83,3 +83,16 @@ Disponible pour un poste en exploitation Linux, administration systèmes ou SecO
 ## Licence
 
 Documentation publiée sous [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — réutilisation autorisée avec attribution et sous la même licence.
+
+## Vérification d'authenticité
+
+Les PDFs sont signés avec ma clé GPG. Pour vérifier qu'ils n'ont pas été modifiés :
+
+# Importer ma clé publique
+gpg --import lionel-rousseau-pubkey.asc
+
+# Vérifier les signatures détachées
+gpg --verify docs/Architecture.pdf.sig docs/Architecture.pdf
+gpg --verify docs/Network-Diagram.pdf.sig docs/Network-Diagram.pdf
+
+Empreinte de la clé : `111D 0326 757E C7EC B3EC 17F5 D28C 8EB0 557B 5620`
