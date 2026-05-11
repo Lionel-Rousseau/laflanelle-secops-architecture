@@ -49,7 +49,7 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 
 ## Documents disponibles
 
-- [`docs/Architecture.pdf`](./docs/Architecture.pdf) — dossier technique complet (~12 pages) : contexte, architecture, contrôles de sécurité, plan de continuité, automatisation, roadmap, retours d'expérience.
+- [`docs/Architecture.pdf`](./docs/Architecture.pdf) — dossier technique complet (15 pages) : contexte, architecture, contrôles de sécurité, plan de continuité, automatisation, roadmap, retours d'expérience.
 - [`docs/Network-Diagram.pdf`](./docs/Network-Diagram.pdf) — diagramme d'architecture anonymisé.
 
 ## Points forts mis en avant
