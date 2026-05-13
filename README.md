@@ -14,16 +14,24 @@ des procédures de continuité et des retours d'expérience associés :
 
 ### Vérification d'intégrité (optionnel)
 
-Le PDF est signé numériquement avec ma clé OpenPGP.  
-Signature détachée : [signatures/LRO_Dossier_Technique_2026.pdf.asc](./signatures/LRO_Dossier_Technique_2026.pdf.asc)  
-Clé publique : [signatures/lionel-rousseau-pubkey.asc](./signatures/lionel-rousseau-pubkey.asc)
+Le PDF est signé numériquement avec ma clé OpenPGP.
 
-Vérification :
+**Fingerprint** : `111D 0326 757E C7EC B3EC  17F5 D28C 8EB0 557B 5620`
+
+**Clé publique disponible** :
+- Sur le keyserver : [keys.openpgp.org](https://keys.openpgp.org/vks/v1/by-fingerprint/111D0326757EC7ECB3EC17F5D28C8EB0557B5620)
+- Dans ce dépôt : [signatures/lionel-rousseau-pubkey.asc](./signatures/lionel-rousseau-pubkey.asc)
+
+**Signature détachée** : [signatures/LRO_Dossier_Technique_2026.pdf.asc](./signatures/LRO_Dossier_Technique_2026.pdf.asc)
+
+**Vérification** :
 \`\`\`bash
-gpg --import signatures/lionel-rousseau-pubkey.asc
+# Import depuis le keyserver
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 111D0326757EC7ECB3EC17F5D28C8EB0557B5620
+
+# Vérification de la signature
 gpg --verify signatures/LRO_Dossier_Technique_2026.pdf.asc LRO_Dossier_Technique_2026.pdf
 \`\`\`
-
 ## Pourquoi ce dépôt
 
 Ce dépôt sert de vitrine technique. Il documente une infrastructure réelle qui supporte une activité économique 24/7 et traite chaque jour ~170 emails entrants et ~19 000 requêtes HTTP. Il s'adresse aux recruteurs, RSSI et responsables d'exploitation qui souhaitent évaluer concrètement ma pratique au-delà d'un CV.
@@ -96,8 +104,9 @@ Quelques chantiers en cours ou programmés pour les douze prochains mois :
 Certifié CompTIA Security+ et CySA+ · TOEIC 980 (C1/C2)
 Disponible pour un poste en exploitation Linux, administration systèmes ou SecOps.
 
-📧 lionel@rousseau.kr
+📧 [`lionel@rousseau.kr`](mailto:lionel@rousseau.kr)
 💼 [LinkedIn](https://www.linkedin.com/in/lionel-rousseau-kr/)
+[GitHub](https://github.com/Lionel-Rousseau).
 
 ## Licence
 
