@@ -1,4 +1,4 @@
-# Architecture SecOps & Continuité — Infrastructure Linux multi-sites
+# Architecture SecOps & Continuité - Infrastructure Linux multi-sites
 
 > Dossier technique d'une infrastructure Linux en production, conçue, déployée et opérée en autonomie depuis 2018.
 > 7 années d'exploitation continue · 99,9 % d'uptime cumulé · défense en profondeur · PCA documenté et testé.
@@ -10,7 +10,7 @@
 
 Présentation complète de l'architecture, des contrôles de sécurité, 
 des procédures de continuité et des retours d'expérience associés :  
-[**LRO_Dossier_Technique_2026.pdf**](./LRO_Dossier_Technique_2026.pdf) — 16 pages.
+[**LRO_Dossier_Technique_2026.pdf**](./LRO_Dossier_Technique_2026.pdf) - 16 pages.
 
 ### Vérification d'intégrité (optionnel)
 
@@ -67,8 +67,8 @@ La défense en profondeur est appliquée sur quatre niveaux : WAF Cloudflare en 
 
 ## Documents disponibles
 
-- [`docs/Architecture.pdf`](./docs/Architecture.pdf) — dossier technique complet (15 pages) : contexte, architecture, contrôles de sécurité, plan de continuité, automatisation, roadmap, retours d'expérience.
-- [`docs/Network-Diagram.pdf`](./docs/Network-Diagram.pdf) — diagramme d'architecture anonymisé.
+- [`docs/Architecture.pdf`](./docs/Architecture.pdf) - dossier technique complet (15 pages) : contexte, architecture, contrôles de sécurité, plan de continuité, automatisation, roadmap, retours d'expérience.
+- [`docs/Network-Diagram.pdf`](./docs/Network-Diagram.pdf) - diagramme d'architecture réseau anonymisé.
 
 ## Points forts mis en avant
 
@@ -86,13 +86,13 @@ Quelques chantiers en cours ou programmés pour les douze prochains mois :
 - Industrialisation de playbooks Ansible publics anonymisés (durcissement Debian/Ubuntu, déploiement Wazuh, déploiement Postfix/Rspamd).
 - Bascule semi-automatique du PCA OPNsense via heartbeat CARP/VRRP.
 - IDS DNS sur Unbound (passive DNS + détection DGA / tunneling).
-- POC HashiCorp Vault dans le VLAN Lab — étude de la rotation dynamique de secrets.
+- POC HashiCorp Vault dans le VLAN Lab - étude de la rotation dynamique de secrets.
 - Découplage des services web & mail pour un retour à 3 serveurs externes.
 - Étude NixOS pour les serveurs OVH publics (reproductibilité atomique, rollback transactionnel).
 
 ## À propos
 
-**Lionel Rousseau** — Administrateur Systèmes Linux & Sécurité Opérationnelle
+**Lionel Rousseau** - Administrateur Systèmes Linux & Sécurité Opérationnelle
 Certifié CompTIA Security+ et CySA+ · TOEIC 980 (C1/C2)
 Disponible pour un poste en exploitation Linux, administration systèmes ou SecOps.
 
