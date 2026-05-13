@@ -1,4 +1,4 @@
-# Architecture SecOps & Continuité — Infrastructure Linux multi-sites
+# Architecture SecOps & Continuité - Infrastructure Linux multi-sites
 
 > Dossier technique d'une infrastructure Linux en production, conçue, déployée
 > et opérée en autonomie depuis 2018.
@@ -100,14 +100,14 @@ la détection des menaces périmétriques.
 - Bascule semi-automatique du PCA OPNsense via CARP/VRRP.
 - IDS DNS sur Unbound (passive DNS + détection DGA / tunneling).
 - POC HashiCorp Vault dans le VLAN Lab.
-- Découplage web & mail — retour à 3 serveurs externes.
+- Découplage web & mail - retour à 3 serveurs externes.
 - Étude NixOS pour les serveurs OVH publics.
 
 ---
 
 ## À propos
 
-**Lionel Rousseau** — Administrateur Systèmes Linux & Sécurité Opérationnelle
+**Lionel Rousseau** - Administrateur Systèmes Linux & Sécurité Opérationnelle
 Certifié CompTIA Security+ et CySA+ · TOEIC 980 (C1/C2)
 Disponible pour un poste en exploitation Linux, administration systèmes ou SecOps.
 
@@ -141,5 +141,5 @@ gpg --verify signatures/LRO_Dossier_Technique_2026.pdf.asc \
 ## Licence
 
 Documentation publiée sous
-[Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) —
+[Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) -
 réutilisation autorisée avec attribution et sous la même licence.
