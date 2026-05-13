@@ -24,12 +24,12 @@ Le PDF est signé numériquement avec ma clé OpenPGP.
 
 **Signature détachée** : [signatures/LRO_Dossier_Technique_2026.pdf.asc](./signatures/LRO_Dossier_Technique_2026.pdf.asc)
 
-## Vérification :
+***Vérification :***
 \`\`\`bash
-### Import depuis le keyserver
+**Import depuis le keyserver**
 gpg --keyserver hkps://keys.openpgp.org --recv-keys 111D0326757EC7ECB3EC17F5D28C8EB0557B5620
 
-## Vérification de la signature
+***Vérification de la signature***
 gpg --verify signatures/LRO_Dossier_Technique_2026.pdf.asc LRO_Dossier_Technique_2026.pdf
 \`\`\`
 ## Pourquoi ce dépôt
