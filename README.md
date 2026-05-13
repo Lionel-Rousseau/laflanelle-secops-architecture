@@ -6,6 +6,13 @@
 
 ---
 
+## 📄 Dossier technique complet
+
+Pour une présentation détaillée de l'architecture, des contrôles de sécurité, 
+des procédures de continuité et des retours d'expérience : 
+[**LRO_Dossier_Technique_2026.pdf**](./LRO_Dossier_Technique_2026.pdf) — 16 pages.
+L'icône 📄 attire l'œil. Le lien cliquable mène directement au PDF. Le recruteur sait
+
 ## Pourquoi ce dépôt
 
 Ce dépôt sert de vitrine technique. Il documente une infrastructure réelle qui supporte une activité économique 24/7 et traite chaque jour ~170 emails entrants et ~19 000 requêtes HTTP. Il s'adresse aux recruteurs, RSSI et responsables d'exploitation qui souhaitent évaluer concrètement ma pratique au-delà d'un CV.
