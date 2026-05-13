@@ -113,6 +113,7 @@ Disponible pour un poste en exploitation Linux, administration systèmes ou SecO
 
 📧 [`lionel@rousseau.kr`](mailto:lionel@rousseau.kr)
 💼 [LinkedIn](https://www.linkedin.com/in/lionel-rousseau-kr/)
+🇫🇷 [Profile](https://lionel.rousseau.kr/)
 
 ---
 
