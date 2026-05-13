@@ -12,7 +12,7 @@ Présentation complète de l'architecture, des contrôles de sécurité,
 des procédures de continuité et des retours d'expérience associés :  
 [**LRO_Dossier_Technique_2026.pdf**](./LRO_Dossier_Technique_2026.pdf) - 16 pages.
 
-### Vérification d'intégrité (optionnel)
+## Vérification d'intégrité (optionnel)
 
 Le PDF est signé numériquement avec ma clé OpenPGP.
 
@@ -24,12 +24,12 @@ Le PDF est signé numériquement avec ma clé OpenPGP.
 
 **Signature détachée** : [signatures/LRO_Dossier_Technique_2026.pdf.asc](./signatures/LRO_Dossier_Technique_2026.pdf.asc)
 
-**Vérification** :
+## Vérification :
 \`\`\`bash
-# Import depuis le keyserver
+### Import depuis le keyserver
 gpg --keyserver hkps://keys.openpgp.org --recv-keys 111D0326757EC7ECB3EC17F5D28C8EB0557B5620
 
-# Vérification de la signature
+## Vérification de la signature
 gpg --verify signatures/LRO_Dossier_Technique_2026.pdf.asc LRO_Dossier_Technique_2026.pdf
 \`\`\`
 ## Pourquoi ce dépôt
