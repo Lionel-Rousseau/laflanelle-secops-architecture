@@ -24,7 +24,7 @@ Le PDF est signé numériquement avec ma clé OpenPGP.
 
 **Signature détachée** : [signatures/LRO_Dossier_Technique_2026.pdf.asc](./signatures/LRO_Dossier_Technique_2026.pdf.asc)
 
-####Vérification :
+#### Vérification :
 \`\`\`bash
 
 **Import depuis le keyserver**
