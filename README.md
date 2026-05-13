@@ -12,7 +12,7 @@ Présentation complète de l'architecture, des contrôles de sécurité,
 des procédures de continuité et des retours d'expérience associés :  
 [**LRO_Dossier_Technique_2026.pdf**](./LRO_Dossier_Technique_2026.pdf) - 16 pages.
 
-## Vérification d'intégrité (optionnel)
+### Vérification d'intégrité (optionnel)
 
 Le PDF est signé numériquement avec ma clé OpenPGP.
 
