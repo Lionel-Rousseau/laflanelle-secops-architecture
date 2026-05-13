@@ -24,14 +24,16 @@ Le PDF est signé numériquement avec ma clé OpenPGP.
 
 **Signature détachée** : [signatures/LRO_Dossier_Technique_2026.pdf.asc](./signatures/LRO_Dossier_Technique_2026.pdf.asc)
 
-***Vérification :***
+***Vérification :
 \`\`\`bash
-**Import depuis le keyserver**
+
+***Import depuis le keyserver
 gpg --keyserver hkps://keys.openpgp.org --recv-keys 111D0326757EC7ECB3EC17F5D28C8EB0557B5620
 
-***Vérification de la signature***
+***Vérification de la signature
 gpg --verify signatures/LRO_Dossier_Technique_2026.pdf.asc LRO_Dossier_Technique_2026.pdf
 \`\`\`
+
 ## Pourquoi ce dépôt
 
 Ce dépôt sert de vitrine technique. Il documente une infrastructure réelle qui supporte une activité économique 24/7 et traite chaque jour ~170 emails entrants et ~19 000 requêtes HTTP. Il s'adresse aux recruteurs, RSSI et responsables d'exploitation qui souhaitent évaluer concrètement ma pratique au-delà d'un CV.
