@@ -6,12 +6,23 @@
 
 ---
 
-## 📄 Dossier technique complet
+## 📄 Dossier technique
 
-Pour une présentation détaillée de l'architecture, des contrôles de sécurité, 
-des procédures de continuité et des retours d'expérience : 
-[**LRO_Dossier_Technique_2026.pdf**](./LRO_Dossier_Technique_2026.pdf) — 16 pages.
-L'icône 📄 attire l'œil. Le lien cliquable mène directement au PDF. Le recruteur sait
+Présentation complète de l'architecture, des contrôles de sécurité, 
+des procédures de continuité et des retours d'expérience associés :  
+[**LRO_Dossier_Technique_2026.pdf**](./LRO_Dossier_Technique_2026.pdf) — 15 pages.
+
+### Vérification d'intégrité (optionnel)
+
+Le PDF est signé numériquement avec ma clé OpenPGP.  
+Signature détachée : [signatures/LRO_Dossier_Technique_2026.pdf.asc](./signatures/LRO_Dossier_Technique_2026.pdf.asc)  
+Clé publique : [signatures/lionel-rousseau-pubkey.asc](./signatures/lionel-rousseau-pubkey.asc)
+
+Vérification :
+\`\`\`bash
+gpg --import signatures/lionel-rousseau-pubkey.asc
+gpg --verify signatures/LRO_Dossier_Technique_2026.pdf.asc LRO_Dossier_Technique_2026.pdf
+\`\`\`
 
 ## Pourquoi ce dépôt
 
