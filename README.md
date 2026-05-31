@@ -93,6 +93,14 @@ la détection des menaces périmétriques.
   production, sortie Internet deny-all + whitelist explicite, activation
   à la demande uniquement.
 
+## Industrialisation
+
+Les composants critiques de cette architecture sont progressivement repris en 
+Infrastructure as Code, brique par brique, dans des dépôts dédiés.
+Première brique publiée : [https://github.com/Lionel-Rousseau/proxmox-unbound-iac](proxmox-unbound-iac),
+provisionnement Terraform + configuration Ansible + validation Bash pour un résolveur 
+Unbound en LXC Proxmox (DNSSEC, DNS-over-TLS).
+
 ## Roadmap
 
 - Intégration Security Onion ↔ Wazuh.
