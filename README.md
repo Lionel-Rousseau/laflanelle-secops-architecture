@@ -97,7 +97,7 @@ la détection des menaces périmétriques.
 
 Les composants critiques de cette architecture sont progressivement repris en 
 Infrastructure as Code, brique par brique, dans des dépôts dédiés.
-Première brique publiée : [https://github.com/Lionel-Rousseau/proxmox-unbound-iac](proxmox-unbound-iac),
+Première brique publiée : [proxmox-unbound-iac]([proxmox-unbound-iac](https://github.com/Lionel-Rousseau/),
 provisionnement Terraform + configuration Ansible + validation Bash pour un résolveur 
 Unbound en LXC Proxmox (DNSSEC, DNS-over-TLS).
 
